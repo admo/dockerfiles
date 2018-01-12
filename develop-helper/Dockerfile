@@ -57,8 +57,8 @@ RUN true \
 
 RUN true \
 	&& useradd --create-home --shell /bin/bash localuser \
-	&& echo 'localuser:localuser' | chpasswd \
-	&& usermod --append --groups sudo localuser
+	&& usermod --append --groups sudo,docker localuser \
+	&& echo 'localuser:localuser' | chpasswd
 
 VOLUME /var/lib/docker
 
