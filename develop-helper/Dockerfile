@@ -26,6 +26,7 @@ RUN true \
 		bash-completion \
 		bsdtar \
 		ca-certificates \
+		language-pack-en \
 		openssh-server \
 		python-minimal \
 		sudo \
@@ -37,7 +38,9 @@ RUN true \
 RUN true \
 	&& sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd \
 	&& mkdir /var/run/sshd \
-	&& echo "AddressFamily inet" >> /etc/ssh/sshd_config
+	&& echo "AddressFamily inet" >> /etc/ssh/sshd_config \
+	&& echo LC_ALL=en_US.UTF-8 >> /etc/environment \
+	&& echo LANG=en_US.UTF-8 >> /etc/environment
 
 RUN true \
 	&& mkdir /opt/clion \
