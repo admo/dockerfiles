@@ -8,6 +8,8 @@ RUN true \
 		build-essential \
 		cmake \
 		git \
+		git-lfs \
+		subversion \
 		vim \
 		# X application support
 		libfreetype6 \
