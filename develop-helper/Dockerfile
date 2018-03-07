@@ -27,6 +27,7 @@ RUN true \
 		bsdtar \
 		ca-certificates \
 		language-pack-en \
+		man-db \
 		openssh-server \
 		python-minimal \
 		sudo \
