@@ -12,7 +12,7 @@ This imgae is based on official docker image of Ubuntu:latest. It contains the f
 ## Usage
 Run container with following command:
 ```Bash
-docker run --restart always --publish 10240:10240 --name compiler-explorer --detach aoleksy/compiler-explorer
+docker run --restart always --publish 127.0.0.1:10240:10240 --name compiler-explorer --detach aoleksy/compiler-explorer
 ```
 
 Description of the used switches:
