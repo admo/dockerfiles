@@ -6,7 +6,9 @@ RUN true \
 		curl \
 		gcc \
 		git \
+		gpg-agent \
 		make \
+		libc6-dev \
 		software-properties-common \
 	&& curl -sL https://deb.nodesource.com/setup_8.x | bash - \
 	&& apt install --assume-yes --no-install-recommends \
